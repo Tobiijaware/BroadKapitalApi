@@ -203,10 +203,64 @@
                                         "type": "string",
                                         "example": "P@ssword1"
                                     },
+                                    "password_confirmation": {
+                                        "description": "Confirm Password",
+                                        "type": "string",
+                                        "example": "P@ssword1"
+                                    },
                                     "token": {
                                         "description": "Token",
                                         "type": "string",
                                         "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Operation successful",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "204": {
+                        "description": "Empty response",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/password/changepassword": {
+            "post": {
+                "tags": [
+                    "Change Password"
+                ],
+                "summary": "Change Password",
+                "operationId": "6d489f48c9ae126c0b4569d9ccf84c25",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "description": "Email",
+                                        "type": "string",
+                                        "example": "email@gmail.com"
+                                    },
+                                    "password": {
+                                        "description": "Password",
+                                        "type": "string",
+                                        "example": "P@ssword1"
+                                    },
+                                    "password_confirmation": {
+                                        "description": "Confirm Password",
+                                        "type": "string",
+                                        "example": "P@ssword1"
                                     }
                                 },
                                 "type": "object"

@@ -28,6 +28,6 @@ Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('email/verify/{id}', [VerificationController::class, 'verify'])->name('verification.verify');
 Route::get('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
-
-Route::post('password/email', [ForgotPasswordController::class, 'forgot'])->name('password.reset');;
+Route::post('password/email', [ForgotPasswordController::class, 'forgot'])->name('password.reset');
 Route::post('password/reset', [ForgotPasswordController::class, 'reset']);
+Route::put('password/changepassword', [ForgotPasswordController::class, 'changepassword'])->name('changepassword');
